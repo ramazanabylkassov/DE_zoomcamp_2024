@@ -1,6 +1,6 @@
 ## Module 3 Homework
 
-<b> SETUP </b>
+<b> SETUP </b>  
 The dataset was downloaded from the [TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) via Mage pipelines (loader & exporter):  
 - file extension: parquet
 - no transformations made
@@ -50,4 +50,4 @@ It is best practice in Big Query to always cluster your data:
 No Points: Write a `SELECT count(*)` query FROM the materialized table you created. How many bytes does it estimate will be read? Why?
 - 0 bytes, because the query was cached from the same exact previous query (question 1)
 
-You can find the sql file with commands to all questions [here]()
+You can find the sql file with commands to all questions [here](https://github.com/ramazanabylkassov/DE_zoomcamp_2024/blob/main/module_3/module_3_homework/module_3_homework.sql)
