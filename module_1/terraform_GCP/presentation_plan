@@ -1,0 +1,37 @@
+Presentation plan
+DE Zoomcamp 1.3.2 - Terraform Basics
+
+GC Service accounts
+- Service accounts
+    - Authentication
+    - Authorization
+    - Scoped Access
+    - Service account keys
+- Create service accounts
+    - Storage Admin
+        - manage storage buckets
+    - Bigquery Admin
+        - manage datasets
+    - Compute Admin
+        - manage VM instances
+
+Terraform
+- Authorize
+    - two ways:
+        1. Using provider block in main.tf file
+        2. using gcloud SDK set of tools
+- Blocks
+    - terraform
+    - provider
+    - google storage bucket
+    - google bigquery dataset
+
+Terraform Commands
+- terraform fmt
+- terraform init
+- terraform plan
+- terraform apply
+- terraform destroy
+
+Github
+- .gitignore

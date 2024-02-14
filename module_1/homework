@@ -1,0 +1,38 @@
+Question 1. Knowing docker tags
+    Run the command to get information on Docker
+    docker --help
+    Now run the command to get help on the "docker build" command:
+    docker build --help
+    Do the same for "docker run".
+    Which tag has the following text? - Automatically remove the container when it exits
+    
+    Answer:   
+        docker run --help 
+            --rm    Automatically remove the container when it exits
+
+Question 2. Understanding docker first run
+    Run docker with the python:3.9 image in an interactive mode and the entrypoint of bash. Now check the python modules that are installed ( use pip list ).
+    What is version of the package wheel?
+
+    Answer:
+        wheel      0.42.0
+
+Question 3. Count records
+    How many taxi trips were totally made on September 18th 2019?
+    Tip: started and finished on 2019-09-18.
+    Remember that lpep_pickup_datetime and lpep_dropoff_datetime columns are in the format timestamp (date and hour+min+sec) and not in date.
+
+    Answer:
+        SELECT COUNT(*) FROM green_taxi_trips
+            WHERE lpep_pickup_datetime::date = '2019-09-18';
+        
+        15767
+
+Question 4. Largest trip for each day
+    Which was the pick up day with the largest trip distance Use the pick up time for your calculations.
+    Answer:
+        SELECT "lpep_pickup_datetime" FROM "green_taxi_trips" WHERE "trip_distance" = (
+	        SELECT MAX("trip_distance") FROM "green_taxi_trips"	
+        );
+
+        2019-09-26
