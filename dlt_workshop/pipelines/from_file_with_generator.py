@@ -1,7 +1,3 @@
-# Authenticate to Google BigQuery
-from google.colab import auth
-auth.authenticate_user()
-
 import requests
 import json
 
@@ -13,6 +9,7 @@ def stream_download_jsonl(url):
     response.raise_for_status()  # Raise an HTTPError for bad responses
     for line in response.iter_lines():
         if line:
+            print(type(json.loads(line)))
             yield json.loads(line)
 
 # time the download
@@ -22,7 +19,6 @@ start = time.time()
 # Use the generator to iterate over rows with minimal memory usage
 row_counter = 0
 for row in stream_download_jsonl(url):
-    print(row)
     row_counter += 1
     if row_counter >= 5:
         break

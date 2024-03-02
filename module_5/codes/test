@@ -1,1 +1,13 @@
 gcloud dataproc jobs submit pyspark --cluster=de-zoomcamp-dataproc --region=us-central1 --jars=gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar gs://dtc_data_lake_de-zoomcamp-nytaxi_ramazan/codes/5.6.2_persistent_master_BQ.py -- --input_green=gs://dtc_data_lake_de-zoomcamp-nytaxi_ramazan/pq/green/2020/*/ --input_yellow=gs://dtc_data_lake_de-zoomcamp-nytaxi_ramazan/pq/yellow/2020/*/ --output=dataproc_cluster_data.reports_2020
+
+
+fhvh_schema = types.StructType([
+    types.StructField('dispatching_base_num', types.StringType(), True), 
+    types.StructField('pickup_datetime', types.TimestampType(), True), 
+    types.StructField('dropOff_datetime', types.TimestampType(), True), 
+    types.StructField('PUlocationID', types.IntegerType(), True), 
+    types.StructField('DOlocationID', types.IntegerType(), True), 
+    types.StructField('SR_Flag', types.StringType(), True), 
+    types.StructField('Affiliated_base_number', types.IntegerType(), True)
+    ])
+
