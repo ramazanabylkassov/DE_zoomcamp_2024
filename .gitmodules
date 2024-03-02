@@ -1,0 +1,3 @@
+[submodule "module_4/DE_zoomcamp_dbt"]
+	path = module_4/DE_zoomcamp_dbt
+	url = https://github.com/ramazanabylkassov/DE_zoomcamp_dbt.git
