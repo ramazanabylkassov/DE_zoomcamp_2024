@@ -1,6 +1,12 @@
 module_1/docker_postgres/ny_taxi_postgres_data/
 *.json
 module_2/mage-quickstart
+module_5/data
+module_5/,venv
+module_5/.lib
+module_5/.ipynb_checkpoints
+GC_creds
+module_2/mage-zoomcamp
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
