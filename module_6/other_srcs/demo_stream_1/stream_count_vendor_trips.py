@@ -12,7 +12,6 @@ vendor_rides = app.Table('vendor_rides', default=int)
 async def process(stream):
     async for event in stream.group_by(TaxiRide.vendorId):
         vendor_rides[event.vendorId] += 1
-        print(event.vendorId, ':', vendor_rides[event.vendorId])
 
 if __name__ == '__main__':
     app.main()
