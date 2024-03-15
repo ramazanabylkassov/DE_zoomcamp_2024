@@ -69,9 +69,11 @@ Row(lpep_pickup_datetime='2019-10-01 00:57:44', lpep_dropoff_datetime='2019-10-0
 **Question 7: Most popular destination**
 
 **Answer:** 
+```
 |window                                    |DOLocationID|count|
 +------------------------------------------+------------+-----+
 |{2024-03-15 12:00:00, 2024-03-15 12:05:00}|74          |35478|
+```
 
 
 
