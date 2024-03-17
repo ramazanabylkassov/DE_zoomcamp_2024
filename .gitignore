@@ -7,6 +7,7 @@ module_5/.lib
 module_5/.ipynb_checkpoints
 GC_creds
 module_2/mage-zoomcamp
+**/.venv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
